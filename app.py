@@ -89,13 +89,13 @@ if uploaded_file is not None:
             plt.xticks(rotation='vertical')
             st.pyplot(fig)
         with col2:
-            st.header("Most monthly day")
+            st.header("Most busy month")
             fig,ax=plt.subplots()
             ax.bar(busy_month.index,busy_month.values,color='orange')
             plt.xticks(rotation='vertical')
             st.pyplot(fig)
         #HEATMAP
-        st.title("HEATMAP OF USER")
+        st.title("HEATMAP OF Week")
         heatmap=helper.activity_heatmap(option,df)
         fig,ax=plt.subplots()
         ax=sns.heatmap(heatmap)
